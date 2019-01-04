@@ -1,0 +1,24 @@
+page-estimate {
+    h3 {
+        font-weight: bold !important;
+        font-size: 1.3em !important;
+        &.mar_top {
+            margin-top: 15px !important;
+        }
+    }
+    ion-item {
+        padding-left: 0px !important;
+        margin-top: 5px !important;
+        .item-inner {
+            padding-bottom: 7px !important;
+        }
+        ion-label {
+            color: #000 !important;
+            font-weight: bold !important;
+            width: 60px;
+        }
+        ion-input {
+            border: 1px solid #ccc;
+        }
+    }
+}

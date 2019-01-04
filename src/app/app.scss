@@ -14,3 +14,23 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// General Background
+.scroll-content {
+    background: color($colors, gray);
+}
+
+// General Header
+.toolbar-background {
+    background: color($colors, primary);
+}
+
+.toolbar-title {
+    color: color($colors, light);
+}
+
+ion-card-header {
+    color: color($colors, white) !important;
+    background: color($colors, primary);
+    margin-bottom: 10px;
+}

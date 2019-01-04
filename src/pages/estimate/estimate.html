@@ -1,0 +1,89 @@
+<ion-header text-center>
+  <ion-navbar>
+    <ion-title>Job Estimator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <div [hidden]="!locationService.locationChosen">
+        <!-- Hidden for Georgia -->
+        <div [hidden]="locationService.locationChosen == 'ga'">
+            <ion-card-header>
+                Estimate a Job for MD/VA/DC/PA
+            </ion-card-header>
+        </div>
+
+        <!-- Shown for Georgia -->
+        <div [hidden]="locationService.locationChosen !== 'ga'">
+            <ion-card-header>
+              Estimate a Job for Atlanta Metro Area
+            </ion-card-header>
+
+        </div>
+    </div>
+
+    <ion-card-content>
+  
+      <div [hidden]="locationService.locationChosen">
+        <p><strong>Please choose your location from the home screen before we can give you relevant estimate information.</strong></p>
+      </div>
+
+      <div [hidden]="!locationService.locationChosen">
+        <form (ngSubmit)="getEstimate()">
+
+          <h3>Location and Number of Needed Scans</h3>
+          <p class="meta">Please indicate the number of scans needed in the following locations. Other consists of Walls, Ceilings, Columns, Beams, etc. Anything over 16' please call for pricing.</p>
+          <ion-item>
+            <ion-label>Floor</ion-label>
+            <ion-input type="number" [(ngModel)]="est.floor" name="Floor" placeholder="0"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Other</ion-label>
+            <ion-input type="number" [(ngModel)]="est.other" name="Other" placeholder="0"></ion-input>
+          </ion-item>
+          
+          <h3 class="mar_top">Time of Day</h3>
+          <p class="meta">Regular hours are considered M-F 6am-5pm.</p>
+          <ion-list radio-group [(ngModel)]="est.tod" name="Time of Day" required>
+            <ion-item>
+              <ion-label>Regular Hours</ion-label>
+              <ion-radio value="rh"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Off Hours and Saturdays</ion-label>
+              <ion-radio value="oh"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sundays and Holidays</ion-label>
+              <ion-radio value="sh"></ion-radio>
+            </ion-item>
+          </ion-list>
+
+          <!--
+          <h3>Location</h3>
+          <p class="meta">Additional fees apply if you are more than 60 miles from our shop.</p>
+          <ion-item>
+            <ion-label>Street Address</ion-label>
+            <ion-textarea [(ngModel)]="est.address" name="Street Address"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label>City</ion-label>
+            <ion-textarea [(ngModel)]="est.city" name="City"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label>Zip</ion-label>
+            <ion-textarea [(ngModel)]="est.zip" name="Zip"></ion-textarea>
+          </ion-item>
+          -->
+
+          <button ion-button type="submit" block>Get Estimate</button>
+        </form>
+
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+      
+</ion-content>

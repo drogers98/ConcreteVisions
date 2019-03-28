@@ -27,3 +27,16 @@ The source image for icons should ideally be at least 1024×1024px and located a
 You can also generate platform-specific icons and splash screens by placing them in the respective resources/<platform>/ directory. For example, to generate an icon for Android, place your image at resources/android/icon.png.
 
 By default, this command will not regenerate resources whose source image has not changed. To disable this functionality and always overwrite generated images, use --force
+
+# To deploy
+
+- Change version in config.xml.
+- build for ios/android.
+create new release in itunes connect
+
+## ios
+- select "generic ios device"
+- product > archive fromk main menu
+
+## android
+- run ionic cordova platform update android for any build issues first

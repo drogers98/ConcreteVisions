@@ -17,8 +17,6 @@ import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { SMS } from '@ionic-native/sms';
 
-import { LocationService } from '../providers/locationService';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -48,7 +46,6 @@ import { LocationService } from '../providers/locationService';
     CallNumber,
     EmailComposer,
     SMS,
-    LocationService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

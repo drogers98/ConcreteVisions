@@ -7,101 +7,75 @@
 </ion-header>
 
 <ion-content>
+  <ion-card>
+      <ion-card-header>
+        Scheduling MD/VA/DC/PA
+      </ion-card-header>
+      <ion-list>
+        <button ion-item (click)="callUs('4107662210')">
+          <ion-icon name="call" item-start></ion-icon>
+          Phone
+        </button>
+        <a ion-item href="sms://4105919883">
+          <ion-icon name="text" item-start></ion-icon>
+          Text
+        </a>
+        <button ion-item (click)="emailUs('twilkinson@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
+          <ion-icon name="mail" item-start></ion-icon>
+          Email
+        </button>
+      </ion-list>
+    </ion-card>
 
-  <div [hidden]="locationService.locationChosen">
-    <p><strong>Please choose your location from the home screen before we can give you relevant contact information.</strong></p>
-  </div>
+    <ion-card>
+      <ion-card-header>
+        General Contact MD/VA/DC/PA
+      </ion-card-header>
+      <ion-list>
+        <button ion-item (click)="callUs('4107662210')">
+          <ion-icon name="call" item-start></ion-icon>
+          Phone
+        </button>
+        <button ion-item (click)="emailUs('twilkinson@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
+          <ion-icon name="mail" item-start></ion-icon>
+          Email
+        </button>
+      </ion-list>
+    </ion-card>
 
-  <div [hidden]="!locationService.locationChosen">
-    <!-- Shown for md/va/etc, Hidden for Georgia -->
-    <div [hidden]="locationService.locationChosen == 'ga'">
+    <ion-card>
+        <ion-card-header>
+          Scheduling Atlanta GA Metro Area
+        </ion-card-header>
+        <ion-list>
+          <button ion-item (click)="callUs('7069773249')">
+            <ion-icon name="call" item-start></ion-icon>
+            Phone
+          </button>
+          <a ion-item href="sms://7069773249">
+            <ion-icon name="text" item-start></ion-icon>
+            Text
+          </a>
+          <button ion-item (click)="emailUs('jharbin@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
+            <ion-icon name="mail" item-start></ion-icon>
+            Email
+          </button>
+        </ion-list>
+      </ion-card>
+
       <ion-card>
-          <ion-card-header>
-            Scheduling MD/VA/DC/PA
-          </ion-card-header>
-      
-          <ion-list>
-            <button ion-item (click)="callUs('4107662210')">
-              <ion-icon name="call" item-start></ion-icon>
-              Phone
-            </button>
-      
-            <a ion-item href="sms://4105919883">
-              <ion-icon name="text" item-start></ion-icon>
-              Text
-            </a>
-      
-            <button ion-item (click)="emailUs('twilkinson@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
-              <ion-icon name="mail" item-start></ion-icon>
-              Email
-            </button>
-      
-          </ion-list>
-        </ion-card>
-      
-        <ion-card>
-          <ion-card-header>
-            General Contact MD/VA/DC/PA
-          </ion-card-header>
-      
-          <ion-list>
-            <button ion-item (click)="callUs('4107662210')">
-              <ion-icon name="call" item-start></ion-icon>
-              Phone
-            </button>
-    
-            <button ion-item (click)="emailUs('twilkinson@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
-              <ion-icon name="mail" item-start></ion-icon>
-              Email
-            </button>
-          </ion-list>
-        </ion-card>
-    </div>
-    
-    <!-- Shown for Georgia -->
-    <div [hidden]="locationService.locationChosen !== 'ga'">
-        <ion-card>
-            <ion-card-header>
-              Scheduling Atlanta GA Metro Area
-            </ion-card-header>
-        
-            <ion-list>
-              <button ion-item (click)="callUs('7069773249')">
-                <ion-icon name="call" item-start></ion-icon>
-                Phone
-              </button>
-        
-              <a ion-item href="sms://7069773249">
-                <ion-icon name="text" item-start></ion-icon>
-                Text
-              </a>
-        
-              <button ion-item (click)="emailUs('jharbin@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
-                <ion-icon name="mail" item-start></ion-icon>
-                Email
-              </button>
-        
-            </ion-list>
-          </ion-card>
-        
-          <ion-card>
-            <ion-card-header>
-              General Contact Atlanta GA Metro Area
-            </ion-card-header>
-        
-            <ion-list>
-              <button ion-item (click)="callUs('7069773249')">
-                <ion-icon name="call" item-start></ion-icon>
-                Phone
-              </button>
-      
-              <button ion-item (click)="emailUs('jharbin@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
-                <ion-icon name="mail" item-start></ion-icon>
-                Email
-              </button>
-            </ion-list>
-          </ion-card>
-    </div>
-  </div>
-
+        <ion-card-header>
+          General Contact Atlanta GA Metro Area
+        </ion-card-header>
+        <ion-list>
+          <button ion-item (click)="callUs('7069773249')">
+            <ion-icon name="call" item-start></ion-icon>
+            Phone
+          </button>
+          <button ion-item (click)="emailUs('jharbin@concretevisions.ws','vrogers@concretevisions.ws', 'emanning@concretevisions.ws')">
+            <ion-icon name="mail" item-start></ion-icon>
+            Email
+          </button>
+        </ion-list>
+      </ion-card>
 </ion-content>

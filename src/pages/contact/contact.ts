@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
-import { LocationService } from '../../providers/locationService';
 
 @Component({
   selector: 'page-contact',
@@ -14,16 +13,9 @@ export class ContactPage {
     public navCtrl: NavController,
     private callNumber: CallNumber,
     private emailComposer: EmailComposer,
-    public locationService: LocationService
-  ) {
+  ) {}
 
-    
-
-  }
-
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   callUs(telephoneNumber) {
     this.callNumber.callNumber(telephoneNumber, true);
@@ -45,7 +37,5 @@ export class ContactPage {
   textUs() {
 
   }
-
-
 
 }

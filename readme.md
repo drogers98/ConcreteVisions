@@ -1,7 +1,12 @@
+# CV Estimator
+
 ## Browser build
+
+nvm use 10
 ionic serve
 
 ## Device builds/deploys
+
 ionic cordova platform add android
 or
 ionic cordova platform add ios
@@ -17,7 +22,8 @@ ionic cordova build android
 ionic cordova build ios
 ionic cordova build ios --prod --release
 
-# Splash screens and icons
+## Splash screens and icons
+
 ionic cordova resources [<platform>]
 
 Ionic can automatically generate perfectly sized icons and splash screens from source images (.png, .psd, or .ai) for your Cordova platforms.
@@ -28,15 +34,17 @@ You can also generate platform-specific icons and splash screens by placing them
 
 By default, this command will not regenerate resources whose source image has not changed. To disable this functionality and always overwrite generated images, use --force
 
-# To deploy
+## To deploy
 
 - Change version in config.xml.
 - build for ios/android.
 create new release in itunes connect
 
-## ios
-- select "generic ios device"
-- product > archive fromk main menu
+### ios
 
-## android
-- run ionic cordova platform update android for any build issues first
+- select "generic ios device"
+- product > archive from main menu
+
+### android
+
+- run ionic cordova platform update android for any build issues first.

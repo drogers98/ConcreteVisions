@@ -8,30 +8,10 @@
   <ion-card>
       <img class="cv--logo" src="assets/imgs/cv-logo.png"/>
     <ion-card-content>
-      <h2>Concrete Scanning & Utility Locating</h2>
+      <h2>Concrete Scanning &amp; Utility Locating</h2>
       <p>
           With a precise, real-time scan using advanced ground penetrating radar technology (GPR), you can be assured of the right outcome before you cut, core, or drill. At Concrete Visions, our staff members have more than 25 years of experience in the concrete scanning industry on projects throughout Washington, D.C., Maryland, Virginia, Pennsylvania and Georgia.
       </p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <div [hidden]="!locationService.locationChosen">
-        <p><strong>You may change your location below if neccesary.</strong></p>
-      </div>
-      <div [hidden]="locationService.locationChosen">
-        <p><strong>Please choose a location below.</strong></p>
-      </div>
-      <ion-item>
-        <ion-label>Your Location</ion-label>
-        <ion-select [ngModel]="locationService.locationChosen" (ngModelChange)="locationChange($event)">
-          <ion-option value="md">Maryland</ion-option>
-          <ion-option value="dc">Washington DC Metro Area</ion-option>
-          <ion-option value="va">Virginia</ion-option>
-          <ion-option value="pa">Pennsylvania</ion-option>
-          <ion-option value="ga">Atlanta GA Metro Area</ion-option>
-        </ion-select>
-      </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
